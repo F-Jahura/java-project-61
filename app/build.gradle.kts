@@ -27,7 +27,6 @@ sonar {
         property("sonar.projectKey", "F-Jahura_java-project-61")
         property("sonar.organization", "f-jahura")
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.working.directory", "/app")
     }
 }
 
