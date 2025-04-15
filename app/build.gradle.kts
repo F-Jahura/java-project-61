@@ -3,6 +3,7 @@ plugins {
     application
     id("com.github.ben-manes.versions") version "0.52.0"
     id("org.sonarqube") version "6.0.1.5171"
+    checkstyle
 }
 
 group = "hexlet.code"
@@ -29,6 +30,7 @@ sonar {
         property("sonar.working.directory", "/app")
     }
 }
+
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.9.1"))
