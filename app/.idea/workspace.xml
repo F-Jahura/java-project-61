@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="968c8273-48ee-4cab-8423-3b01eb519109" name="Changes" comment="" />
+    <list default="true" id="968c8273-48ee-4cab-8423-3b01eb519109" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +60,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "//wsl$/Ubuntu/home/fatema/java-project-61/app",
+    "last_opened_file_path": "//wsl$/Ubuntu/home/fatema/java-project-61",
     "onboarding.tips.debug.path": "//wsl$/Ubuntu/home/fatema/java-project-61/app/src/main/java/hexlet/code/Main.java",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
