@@ -3,15 +3,13 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Even {
-    //private static int number;
     public static void evenNumber() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-
         int count = 0;
 
         for (int i = 0; i < 3; i++) {
-            int number = scanner.nextInt();
+            int number = 1 + (int) (Math.random() * ((100 - 1) + 1));
             System.out.println("Question: " + number);
             String answer = scanner.next();
             System.out.println("Your answer: " + answer);
@@ -33,6 +31,5 @@ public class Even {
         if (count == 3) {
             System.out.println("Congratulations, " + Cli.getText() + "!");
         }
-
     }
 }
