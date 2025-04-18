@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Random;
@@ -30,7 +29,9 @@ public class Calculator {
             int resultSub = engine.getNumber() - engine.getNumber1();
             int resultMultiply = engine.getNumber() * engine.getNumber1();
 
-            if (chars == '+' && answer == resultPlus || chars == '-' && answer == resultSub || chars == '*' && answer == resultMultiply) {
+            if (chars == '+' && answer == resultPlus
+                    || chars == '-' && answer == resultSub
+                    || chars == '*' && answer == resultMultiply) {
                 Engine.correct();
 
             } else {

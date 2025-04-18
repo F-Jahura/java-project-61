@@ -1,6 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
 import java.util.Scanner;
@@ -20,7 +19,8 @@ public class Even {
             Engine.answer();
             System.out.print(answer);
 
-            if (engine.getNumber() % 2 == 0 && answer.equals("yes") || engine.getNumber() % 2 != 0 && answer.equals("no")) {
+            if (engine.getNumber() % 2 == 0 && answer.equals("yes")
+                    || engine.getNumber() % 2 != 0 && answer.equals("no")) {
                 Engine.correct();
             } else {
                 if (answer.equals("yes")) {

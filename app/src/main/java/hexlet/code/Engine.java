@@ -45,7 +45,7 @@ public class Engine {
         System.out.print("Your answer: ");
     }
 
-    public static void correct(){
+    public static void correct() {
         System.out.println("\nCorrect!");
     }
 
@@ -54,8 +54,9 @@ public class Engine {
     }
 
     public static void gameResult() {
-        if (count == 3)
+        if (count == 3) {
             System.out.println("Congratulations, " + text + "!");
+        }
     }
 
     public static void warning() {
