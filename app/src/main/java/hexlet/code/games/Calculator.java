@@ -21,38 +21,19 @@ public class Calculator {
             Engine.question();
             System.out.print(engine.getNumber() + " " + chars + " " + engine.getNumber1() + "\n");
 
-            int answer = scanner.nextInt();
             Engine.answer();
-            System.out.print(answer);
+            int answer = scanner.nextInt();
 
             int resultPlus = engine.getNumber() + engine.getNumber1();
             int resultSub = engine.getNumber() - engine.getNumber1();
             int resultMultiply = engine.getNumber() * engine.getNumber1();
 
-            if (chars == '+' && answer == resultPlus
-                    || chars == '-' && answer == resultSub
-                    || chars == '*' && answer == resultMultiply) {
-                Engine.correct();
-
-            } else {
-                if (chars == '+') {
-                    System.out.print("\n'" + answer);
-                    Engine.warning();
-                    System.out.print(resultPlus);
-                    Engine.tryAgain();
-                } else if (chars == '-') {
-                    System.out.print("\n'" + answer);
-                    Engine.warning();
-                    System.out.print(resultSub);
-                    Engine.tryAgain();
-                } else {
-                    System.out.print("\n'" + answer);
-                    Engine.warning();
-                    System.out.print(resultMultiply);
-                    Engine.tryAgain();
-                }
-
-                System.exit(0);
+            if (chars == '+') {
+                Engine.checkAnswer(Integer.toString(answer), Integer.toString(resultPlus));
+            } else if (chars == '-') {
+                Engine.checkAnswer(Integer.toString(answer), Integer.toString(resultSub));
+            } else if (chars == '*') {
+                Engine.checkAnswer(Integer.toString(answer), Integer.toString(resultMultiply));
             }
         }
 

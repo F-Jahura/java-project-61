@@ -15,30 +15,18 @@ public class Even {
             Engine.question();
             System.out.print(engine.getNumber() + "\n");
 
-            String answer = scanner.next();
             Engine.answer();
-            System.out.print(answer);
+            String answer = scanner.next();
 
-            if (engine.getNumber() % 2 == 0 && answer.equals("yes")
-                    || engine.getNumber() % 2 != 0 && answer.equals("no")) {
-                Engine.correct();
+            if (engine.getNumber() % 2 == 0) {
+                Engine.checkAnswer(answer, "yes");
             } else {
-                if (answer.equals("yes")) {
-                    System.out.print("\n'" + answer);
-                    Engine.warning();
-                    System.out.print("no");
-                    Engine.tryAgain();
-                } else {
-                    System.out.print("\n'" + answer);
-                    Engine.warning();
-                    System.out.print("yes");
-                    Engine.tryAgain();
-                }
-                System.exit(0);
+                Engine.checkAnswer(answer, "no");
             }
         }
 
         Engine.gameResult();
     }
 }
+
 

@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
-    private static String text;
+    private static String name;
 
     Random random = new Random();
 
@@ -15,10 +15,6 @@ public class Engine {
 
     public Engine() {
         count++;
-    }
-
-    public static int getCount() {
-        return count;
     }
 
     public int getNumber() {
@@ -33,8 +29,8 @@ public class Engine {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
-        text = scanner.nextLine();
-        System.out.println("Hello, " + text + "!");
+        name = scanner.nextLine();
+        System.out.println("Hello, " + name + "!");
     }
 
     public static void question() {
@@ -45,22 +41,19 @@ public class Engine {
         System.out.print("Your answer: ");
     }
 
-    public static void correct() {
-        System.out.println("\nCorrect!");
-    }
-
-    public static void tryAgain() {
-        System.out.println("'. \nLet's try again, " + text + "!");
+    public static void checkAnswer(String answer, String expectedAnswer) {
+        if (answer.equals(expectedAnswer)) {
+            System.out.println("Correct!");
+        } else {
+            System.out.print("'" + answer + "' is wrong answer ;(. Correct answer was '" + expectedAnswer + "'");
+            System.out.println("'. \nLet's try again, " + name + "!");
+            System.exit(0);
+        }
     }
 
     public static void gameResult() {
         if (count == 3) {
-            System.out.println("Congratulations, " + text + "!");
+            System.out.println("Congratulations, " + name + "!");
         }
     }
-
-    public static void warning() {
-        System.out.print("' is wrong answer ;(. Correct answer was '");
-    }
-
 }
