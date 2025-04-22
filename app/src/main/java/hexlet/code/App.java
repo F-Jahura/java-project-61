@@ -26,24 +26,24 @@ public class App {
 
         int number = scanner.nextInt();
 
-        if (number == 1) {
+        if (number == GREET_COMMAND) {
             Engine.playerDetails();
-        } else if (number == 2) {
+        } else if (number == EVEN_COMMAND) {
             Engine.playerDetails();
             Even.evenNumber();
-        } else if (number == 3) {
+        } else if (number == CALC_COMMAND) {
             Engine.playerDetails();
             Calculator.myCalculator();
-        } else if (number == 4) {
+        } else if (number == GCD_COMMAND) {
             Engine.playerDetails();
             GCD.myGcd();
-        } else if (number == 5) {
+        } else if (number == PROGRESSION_COMMAND) {
             Engine.playerDetails();
             Progression.loop();
-        } else if (number == 6) {
+        } else if (number == PRIME_COMMAND) {
             Engine.playerDetails();
             Prime.printPrimeNumber();
-        } else if (number == 0) {
+        } else if (number == EXIT_COMMAND) {
             System.exit(0);
         }
     }
