@@ -1,28 +1,13 @@
 package hexlet.code;
 
-import java.util.Random;
 import java.util.Scanner;
 
-public class Engine {
+public abstract class Engine {
     private static String name;
-
-    Random random = new Random();
-
-    private int number = 1 + (int) (Math.random() * ((100 - 1) + 1));
-    private int number1 = 1 + (int) (Math.random() * ((100 - 1) + 1));
-
+    private static final int RESULT_COUNT = 3;
     private static int count;
-
-    public Engine() {
-        count++;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public int getNumber1() {
-        return number1;
+    public static int getCount() {
+        return count;
     }
 
     public static void playerDetails() {
@@ -44,6 +29,7 @@ public class Engine {
     public static void checkAnswer(String answer, String expectedAnswer) {
         if (answer.equals(expectedAnswer)) {
             System.out.println("Correct!");
+            count++;
         } else {
             System.out.print("'" + answer + "' is wrong answer ;(. Correct answer was '" + expectedAnswer + "'");
             System.out.println("'. \nLet's try again, " + name + "!");
@@ -52,7 +38,7 @@ public class Engine {
     }
 
     public static void gameResult() {
-        if (count == 3) {
+        if (count == RESULT_COUNT) {
             System.out.println("Congratulations, " + name + "!");
         }
     }

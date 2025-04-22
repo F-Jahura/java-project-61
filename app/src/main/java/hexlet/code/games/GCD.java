@@ -4,8 +4,9 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class GCD {
-
+public class GCD extends Engine {
+    private static final int MAX_NUMBER = 100;
+    private static final int LENGTH = 3;
     public static int findDivider(int a, int b) {
         if (b == 0) {
             return a;
@@ -17,16 +18,17 @@ public class GCD {
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
-        for (int i = 0; i < 3; i++) {
-            Engine engine = new Engine();
+        for (int i = 0; i < LENGTH; i++) {
+            int number = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
+            int number1  = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
 
             Engine.question();
-            System.out.print(engine.getNumber() + " " + engine.getNumber1() + "\n");
+            System.out.print(number + " " + number1 + "\n");
 
             Engine.answer();
             int answer = scanner.nextInt();
 
-            int divider = findDivider(engine.getNumber(), engine.getNumber1());
+            int divider = findDivider(number, number1);
 
             Engine.checkAnswer(Integer.toString(answer), Integer.toString(divider));
         }
