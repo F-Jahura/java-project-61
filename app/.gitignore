@@ -39,4 +39,8 @@ bin/
 .vscode/
 
 ### Mac OS ###
-.DS_Store
+.DS_Storegradle.xml
+misc.xml
+uiDesigner.xml
+vcs.xml
+worspace.xml
