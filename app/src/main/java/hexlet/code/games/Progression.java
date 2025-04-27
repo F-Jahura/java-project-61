@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Progression extends Engine {
+public final class Progression extends Engine {
     private static final int MAX_NUMBER = 100;
     private static final int LENGTH = 3;
     private static final int MIN_RANGE = 5;

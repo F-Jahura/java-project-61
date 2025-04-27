@@ -5,7 +5,7 @@ import hexlet.code.Engine;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Calculator extends Engine {
+public final class Calculator extends Engine {
     private static final int MAX_NUMBER = 100;
     private static final int LENGTH = 3;
 

@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class GCD extends Engine {
+public final class GCD extends Engine {
     private static final int MAX_NUMBER = 100;
     private static final int LENGTH = 3;
     public static int findDivider(int a, int b) {

@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class Prime extends Engine {
+public final class Prime extends Engine {
     private static final int MAX_NUMBER = 100;
     private static final int LENGTH = 3;
     public static void printPrimeNumber() {

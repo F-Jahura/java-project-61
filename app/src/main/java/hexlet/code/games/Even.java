@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 
 import java.util.Scanner;
 
-public class Even extends Engine {
+public final class Even extends Engine {
     private static final int MAX_NUMBER = 100;
     private static final int LENGTH = 3;
 
