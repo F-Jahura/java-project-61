@@ -1,7 +1,6 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Cli;
 
 import java.util.Scanner;
 
@@ -15,27 +14,28 @@ public class GCD extends Engine {
         return findDivider(b, a % b);
     }
     public static void myGcd() {
+    }
+
+    @Override
+    public void startGame() {
+        System.out.println("Find the greatest common divisor of given numbers.");
+    }
+
+    @Override
+    public void playGame() {
         Scanner scanner = new Scanner(System.in);
 
-        Cli.introduce();
+        int number = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
+        int number1  = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
 
-        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.print("Question: ");
+        System.out.print(number + " " + number1 + "\n");
 
-        for (int i = 0; i < LENGTH; i++) {
-            int number = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
-            int number1  = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
+        System.out.print("Your answer: ");
+        int answer = scanner.nextInt();
 
-            Engine.question();
-            System.out.print(number + " " + number1 + "\n");
+        int divider = findDivider(number, number1);
 
-            Engine.answer();
-            int answer = scanner.nextInt();
-
-            int divider = findDivider(number, number1);
-
-            Engine.checkAnswer(Integer.toString(answer), Integer.toString(divider));
-        }
-
-        Engine.gameResult();
+        Engine.checkAnswer(Integer.toString(answer), Integer.toString(divider));
     }
 }

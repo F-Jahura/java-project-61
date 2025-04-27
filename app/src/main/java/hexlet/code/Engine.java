@@ -1,21 +1,25 @@
 package hexlet.code;
 
-import java.util.Scanner;
-
 public abstract class Engine {
     private static final int RESULT_COUNT = 3;
     private static int count;
-    public static int getCount() {
-        return count;
+
+    private static final int LENGTH = 3;
+
+    public void games() {
+        Cli.introduce();
+        startGame();
+        playCircle();
+        gameResult();
     }
 
+    public abstract void startGame();
+    public abstract void playGame();
 
-    public static void question() {
-        System.out.print("Question: ");
-    }
-
-    public static void answer() {
-        System.out.print("Your answer: ");
+    public void playCircle() {
+        for (int i = 0; i < LENGTH; i++) {
+            playGame();
+        }
     }
 
     public static void checkAnswer(String answer, String expectedAnswer) {
@@ -29,7 +33,7 @@ public abstract class Engine {
         }
     }
 
-    public static void gameResult() {
+    public void gameResult() {
         if (count == RESULT_COUNT) {
             System.out.println("Congratulations, " + Cli.getText() + "!");
         }

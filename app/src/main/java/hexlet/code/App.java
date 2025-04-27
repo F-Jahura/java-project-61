@@ -19,6 +19,7 @@ public class App {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Please choose the number and press Enter!");
         System.out.print(GREET_COMMAND + " - Greet \n" + EVEN_COMMAND + " - Even \n" + CALC_COMMAND
                 +  " - Calc \n" + GCD_COMMAND + " - GCD \n" + PROGRESSION_COMMAND + " - Progression \n"
@@ -29,15 +30,15 @@ public class App {
         if (number == GREET_COMMAND) {
             Cli.introduce();
         } else if (number == EVEN_COMMAND) {
-            Even.evenNumber();
+            new Even().games();
         } else if (number == CALC_COMMAND) {
-            Calculator.myCalculator();
+            new Calculator().games();
         } else if (number == GCD_COMMAND) {
-            GCD.myGcd();
+            new GCD().games();
         } else if (number == PROGRESSION_COMMAND) {
-            Progression.loop();
+            new Progression().games();
         } else if (number == PRIME_COMMAND) {
-            Prime.printPrimeNumber();
+            new Prime().games();
         } else if (number == EXIT_COMMAND) {
             System.exit(0);
         }
