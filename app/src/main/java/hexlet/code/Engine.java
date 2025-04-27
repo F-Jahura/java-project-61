@@ -6,7 +6,7 @@ public abstract class Engine {
 
     private static final int LENGTH = 3;
 
-    public void games() {
+    public final void games() {
         Cli.introduce();
         startGame();
         playCircle();
@@ -16,7 +16,7 @@ public abstract class Engine {
     public abstract void startGame();
     public abstract void playGame();
 
-    public void playCircle() {
+    public final void playCircle() {
         for (int i = 0; i < LENGTH; i++) {
             playGame();
         }
@@ -33,7 +33,7 @@ public abstract class Engine {
         }
     }
 
-    public void gameResult() {
+    public final void gameResult() {
         if (count == RESULT_COUNT) {
             System.out.println("Congratulations, " + Cli.getText() + "!");
         }
