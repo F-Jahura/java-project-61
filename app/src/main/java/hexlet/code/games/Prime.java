@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Cli;
 
 import java.util.Scanner;
 
@@ -9,6 +10,8 @@ public class Prime extends Engine {
     private static final int LENGTH = 3;
     public static void printPrimeNumber() {
         Scanner scanner = new Scanner(System.in);
+
+        Cli.introduce();
 
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 

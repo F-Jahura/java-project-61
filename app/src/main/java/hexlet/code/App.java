@@ -27,21 +27,16 @@ public class App {
         int number = scanner.nextInt();
 
         if (number == GREET_COMMAND) {
-            Engine.playerDetails();
+            Cli.introduce();
         } else if (number == EVEN_COMMAND) {
-            Engine.playerDetails();
             Even.evenNumber();
         } else if (number == CALC_COMMAND) {
-            Engine.playerDetails();
             Calculator.myCalculator();
         } else if (number == GCD_COMMAND) {
-            Engine.playerDetails();
             GCD.myGcd();
         } else if (number == PROGRESSION_COMMAND) {
-            Engine.playerDetails();
             Progression.loop();
         } else if (number == PRIME_COMMAND) {
-            Engine.playerDetails();
             Prime.printPrimeNumber();
         } else if (number == EXIT_COMMAND) {
             System.exit(0);

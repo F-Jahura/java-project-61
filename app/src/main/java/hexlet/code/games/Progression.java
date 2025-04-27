@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Cli;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -15,6 +16,8 @@ public class Progression extends Engine {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         StringBuilder stringBuilder = new StringBuilder();
+
+        Cli.introduce();
 
         System.out.println("What number is missing in the progression?");
 

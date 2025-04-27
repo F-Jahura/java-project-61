@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Cli;
 
 import java.util.Scanner;
 
@@ -9,6 +10,8 @@ public class Even extends Engine {
     private static final int LENGTH = 3;
     public static void evenNumber() {
         Scanner scanner = new Scanner(System.in);
+
+        Cli.introduce();
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
 

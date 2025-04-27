@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Cli;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -11,6 +12,8 @@ public class Calculator extends Engine {
     public static void myCalculator() {
         Random random = new Random(1);
         Scanner scanner = new Scanner(System.in);
+
+        Cli.introduce();
 
         System.out.println("What is the result of the expression? ");
 

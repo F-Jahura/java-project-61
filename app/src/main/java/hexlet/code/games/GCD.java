@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Cli;
 
 import java.util.Scanner;
 
@@ -15,6 +16,8 @@ public class GCD extends Engine {
     }
     public static void myGcd() {
         Scanner scanner = new Scanner(System.in);
+
+        Cli.introduce();
 
         System.out.println("Find the greatest common divisor of given numbers.");
 
