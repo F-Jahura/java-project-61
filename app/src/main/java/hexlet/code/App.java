@@ -30,15 +30,15 @@ public class App {
         if (number == GREET_COMMAND) {
             Cli.introduce();
         } else if (number == EVEN_COMMAND) {
-            new Even().games();
+            Even.evenGame();
         } else if (number == CALC_COMMAND) {
-            new Calculator().games();
+            Calculator.calculatorGame();
         } else if (number == GCD_COMMAND) {
-            new GCD().games();
+            GCD.gcdGame();
         } else if (number == PROGRESSION_COMMAND) {
-            new Progression().games();
+            Progression.progressionGame();
         } else if (number == PRIME_COMMAND) {
-            new Prime().games();
+            Prime.primeGame();
         } else if (number == EXIT_COMMAND) {
             System.exit(0);
         }

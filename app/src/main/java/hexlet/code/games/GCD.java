@@ -2,40 +2,21 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Scanner;
+public final class GCD {
+    public static void gcdGame() {
+        String text = "\"Find the greatest common divisor of given numbers.\"";
+        Engine.gameRules(text, "GCD");
+    }
 
-public final class GCD extends Engine {
-    private static final int MAX_NUMBER = 100;
-    private static final int LENGTH = 3;
     public static int findDivider(int a, int b) {
         if (b == 0) {
             return a;
         }
         return findDivider(b, a % b);
     }
-    public static void myGcd() {
-    }
 
-    @Override
-    public void startGame() {
-        System.out.println("Find the greatest common divisor of given numbers.");
-    }
-
-    @Override
-    public void playGame() {
-        Scanner scanner = new Scanner(System.in);
-
-        int number = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
-        int number1  = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
-
-        System.out.print("Question: ");
-        System.out.print(number + " " + number1 + "\n");
-
-        System.out.print("Your answer: ");
-        int answer = scanner.nextInt();
-
+    public static int correctAnswer(int number, int number1) {
         int divider = findDivider(number, number1);
-
-        Engine.checkAnswer(Integer.toString(answer), Integer.toString(divider));
+        return divider;
     }
 }

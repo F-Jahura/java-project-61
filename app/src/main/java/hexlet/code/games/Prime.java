@@ -2,13 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
-public final class Prime extends Engine {
-    private static final int MAX_NUMBER = 100;
-    private static final int LENGTH = 3;
-    public static void printPrimeNumber() {
-
+public final class Prime {
+    public static void primeGame() {
+        String text = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        Engine.gameRules(text, "Prime");
     }
     public static boolean isPrimeNumber(int number) {
         if (number <= 1) {
@@ -22,28 +19,11 @@ public final class Prime extends Engine {
         }
         return true;
     }
-
-    @Override
-    public void startGame() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-    }
-
-    @Override
-    public void playGame() {
-        Scanner scanner = new Scanner(System.in);
-
-        int number = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
-
-        System.out.print("Question: ");
-        System.out.print(number + "\n");
-
-        System.out.print("Your answer: ");
-        String answer = scanner.nextLine();
-
+    public static String correctAnswer(int number) {
         if (isPrimeNumber(number)) {
-            Engine.checkAnswer(answer, "yes");
+            return "yes";
         } else {
-            Engine.checkAnswer(answer, "no");
+            return "no";
         }
     }
 }
