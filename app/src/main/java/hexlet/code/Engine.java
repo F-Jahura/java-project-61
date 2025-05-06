@@ -73,4 +73,26 @@ public class Engine {
             System.out.println("Congratulations, " + Cli.getText() + "!");
         }
     }
+
+    public static void gameRules1(String question, String expectedAnswer) {
+        System.out.println("Question: " + question);
+
+        String answer = scanner.nextLine();
+
+        System.out.println("Your answer: " + answer);
+
+
+        if (answer.equals(expectedAnswer)) {
+            System.out.println("Correct!");
+            count++;
+        } else {
+            System.out.print("'" + answer + "' is wrong answer ;(. Correct answer was '" + expectedAnswer + "'");
+            System.out.println("'. \nLet's try again, " + Cli.getText() + "!");
+            System.exit(0);
+        }
+
+        if (count == RESULT_COUNT) {
+            System.out.println("Congratulations, " + Cli.getText() + "!");
+        }
+    }
 }

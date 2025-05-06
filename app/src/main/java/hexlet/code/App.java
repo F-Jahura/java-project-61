@@ -5,6 +5,7 @@ import hexlet.code.games.Calculator;
 import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
+import hexlet.code.games.Even1;
 
 import java.util.Scanner;
 
@@ -30,7 +31,8 @@ public class App {
         if (number == GREET_COMMAND) {
             Cli.introduce();
         } else if (number == EVEN_COMMAND) {
-            Even.evenGame();
+            //Even.evenGame();
+            Even1.evenGameTry();
         } else if (number == CALC_COMMAND) {
             Calculator.calculatorGame();
         } else if (number == GCD_COMMAND) {
