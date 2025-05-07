@@ -11,10 +11,27 @@ public final class Progression {
     private static final int MAX_RANGE = 10;
     private static final int MAX_NUMBER1 = 15;
     private static int temp;
-    public static void progressionGame() {
+    private static final int LENGTH = 3;
+
+    public static void progressionRun() {
         String text = "What number is missing in the progression?";
-        Engine.gameRules(text, "Progression");
+        Engine.games(text, questionAnswer());
     }
+
+    public static String[][] questionAnswer() {
+        String[][] roundsData = new String[LENGTH][2];
+
+        for (int i = 0; i < LENGTH; i++) {
+            String question = Progression.questionNumber();
+            String expectedAnswer = Integer.toString(gameRules());
+
+            roundsData[i][0] = question;
+            roundsData[i][1] = expectedAnswer;
+        }
+
+        return roundsData;
+    }
+
 
     public static String questionNumber() {
         StringBuilder stringBuilder = new StringBuilder();
@@ -37,7 +54,7 @@ public final class Progression {
         return stringBuilder.toString();
     }
 
-    public static int correctAnswer() {
+    public static int gameRules() {
         return temp;
     }
 }
