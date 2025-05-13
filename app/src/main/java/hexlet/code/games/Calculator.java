@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Random;
 
@@ -17,12 +18,12 @@ public final class Calculator {
         String[][] roundsData = new String[LENGTH][2];
 
         for (int i = 0; i < LENGTH; i++) {
-            int number = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
-            int number1 = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
+            int number = Utils.getRandomNumber(1, MAX_NUMBER);
+            int number1 = Utils.getRandomNumber(1, MAX_NUMBER);
             char[] symbols = {'+', '-', '*'};
             char operator = symbols[new Random().nextInt(symbols.length)];
             String question = number + " " + operator + " " + number1;
-            String expectedAnswer = Integer.toString(gameRules(number, number1, operator));
+            String expectedAnswer = Integer.toString(calculation(number, number1, operator));
 
             roundsData[i][0] = question;
             roundsData[i][1] = expectedAnswer;
@@ -30,17 +31,16 @@ public final class Calculator {
         return roundsData;
     }
 
-    public static int gameRules(int number, int number1, char operator) {
-        int resultPlus = number + number1;
-        int resultSub = number - number1;
-        int resultMultiply = number * number1;
-
-        if (operator == '+') {
-            return resultPlus;
-        } else if (operator == '-') {
-            return resultSub;
-        } else {
-            return resultMultiply;
+    public static int calculation(int number, int number1, char operator) {
+        switch (operator) {
+            case '+':
+                return number + number1;
+            case '-':
+                return number - number1;
+            case '*':
+                return number * number1;
+            default:
+                throw new IllegalArgumentException("Invalid operator: " + operator);
         }
     }
 }

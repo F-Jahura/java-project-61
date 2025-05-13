@@ -3,17 +3,18 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    private static final int RESULT_COUNT = 3;
-    private static final int MAX_NUMBER = 100;
-    private static int count;
     private static final int LENGTH = 3;
     private static Scanner scanner = new Scanner(System.in);
 
+    private static String userName;
 
-    public static void games(String startGame, String[][] round) {
-        Cli.introduce();
+    public static void games(String textRules, String[][] round) {
+        System.out.println("Welcome to the Brain Games!");
+        System.out.println("May I have your name?");
+        userName = scanner.nextLine();
+        System.out.println("Hello, " + userName + "!");
 
-        System.out.println(startGame);
+        System.out.println(textRules);
 
         for (int i = 0; i < LENGTH; i++) {
             System.out.println("Question: " + round[i][0]);
@@ -22,16 +23,13 @@ public class Engine {
 
             if (answer.equals(round[i][1])) {
                 System.out.println("Correct!");
-                count++;
             } else {
                 System.out.print("'" + answer + "' is wrong answer ;(. Correct answer was '" + round[i][1] + "'");
-                System.out.println("'. \nLet's try again, " + Cli.getText() + "!");
+                System.out.println("'. \nLet's try again, " + userName + "!");
                 System.exit(0);
             }
         }
 
-        if (count == RESULT_COUNT) {
-            System.out.println("Congratulations, " + Cli.getText() + "!");
-        }
+        System.out.println("Congratulations, " + userName + "!");
     }
 }

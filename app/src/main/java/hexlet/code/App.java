@@ -27,20 +27,29 @@ public class App {
 
         int number = scanner.nextInt();
 
-        if (number == GREET_COMMAND) {
-            Cli.introduce();
-        } else if (number == EVEN_COMMAND) {
-            Even.evenRun();
-        } else if (number == CALC_COMMAND) {
-            Calculator.calculatorRun();
-        } else if (number == GCD_COMMAND) {
-            GCD.gcdRun();
-        } else if (number == PROGRESSION_COMMAND) {
-            Progression.progressionRun();
-        } else if (number == PRIME_COMMAND) {
-            Prime.primeRun();
-        } else if (number == EXIT_COMMAND) {
-            System.exit(0);
+        switch (number) {
+            case GREET_COMMAND:
+                Cli.introduce();
+                break;
+            case EVEN_COMMAND:
+                Even.evenRun();
+                break;
+            case CALC_COMMAND:
+                Calculator.calculatorRun();
+                break;
+            case GCD_COMMAND:
+                GCD.gcdRun();
+                break;
+            case PROGRESSION_COMMAND:
+                Progression.progressionRun();
+                break;
+            case PRIME_COMMAND:
+                Prime.primeRun();
+                break;
+            case EXIT_COMMAND:
+                System.exit(0);
+            default:
+                throw new IllegalArgumentException("Invalid command");
         }
     }
 }

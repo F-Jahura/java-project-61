@@ -11,8 +11,4 @@ public class Cli {
         text = scanner.nextLine();
         System.out.println("Hello, " + text + "!");
     }
-
-    public static String getText() {
-        return text;
-    }
 }

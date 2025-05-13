@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 import java.util.Random;
 
@@ -35,9 +36,9 @@ public final class Progression {
 
     public static String questionNumber() {
         StringBuilder stringBuilder = new StringBuilder();
-        int number1  = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
-        int number = 1 + (int) (Math.random() * ((MAX_NUMBER1 - 1) + 1));
-        int length = MIN_RANGE + (int) (Math.random() * ((MAX_RANGE - MIN_RANGE) + MIN_RANGE));
+        int number1  = Utils.getRandomNumber(1, MAX_NUMBER);
+        int number = Utils.getRandomNumber(1, MAX_NUMBER1);
+        int length = Utils.getRandomNumber(MIN_RANGE, MAX_RANGE);
         int index = random.nextInt(length);
         String missing = "..";
 

@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public final class GCD {
     private static final int LENGTH = 3;
@@ -15,8 +16,8 @@ public final class GCD {
         String[][] roundsData = new String[LENGTH][2];
 
         for (int i = 0; i < LENGTH; i++) {
-            int number = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
-            int number1 = 1 + (int) (Math.random() * ((MAX_NUMBER - 1) + 1));
+            int number = Utils.getRandomNumber(1, MAX_NUMBER);
+            int number1 = Utils.getRandomNumber(1, MAX_NUMBER);
             String question = number + " " + number1;
             String expectedAnswer = Integer.toString(gameRules(number, number1));
 
